@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
+    <title>Document</title>
+</head>
+<body class="bs-body-bg-rgb">
+<div id="app" >
+    <div class="container-lg">
+        <h1 class="h1">Calculate Median</h1>
+        <div class="mb-3">
+            <label for="numberBasic" class="form-label">Likert scale 1:</label>
+            <input type="number" class="form-control" id="numberBasic" aria-describedby="numberHelp" v-model="likert1">
+        </div>
+        <div class="mb-3">
+            <label for="numberBasic" class="form-label">Likert scale 2:</label>
+            <input type="number" class="form-control" id="numberBasic" aria-describedby="numberHelp" v-model="likert2">
+        </div>
+        <div class="mb-3">
+            <label for="numberBasic" class="form-label">Likert scale 3:</label>
+            <input type="number" class="form-control" id="numberBasic" aria-describedby="numberHelp" v-model="likert3">
+        </div>
+        <div class="mb-3">
+            <label for="numberBasic" class="form-label">Likert scale 4:</label>
+            <input type="number" class="form-control" id="numberBasic" aria-describedby="numberHelp" v-model="likert4">
+        </div>
+        <div class="mb-3">
+            <label for="numberBasic" class="form-label">Likert scale 5:</label>
+            <input type="number" class="form-control" id="numberBasic" aria-describedby="numberHelp" v-model="likert5">
+        </div>
+
+        <button type="button" class="btn btn-primary" @click="calculateMedian">Calculate Median</button>
+        <br>
+        <br>
+        <p>Median: {{ median }}</p>
+        <br>
+        <ul class="list-group">
+            <li v-for="num in sortedLikertArray" class="list-group-item">
+                {{ num }}
+            </li>
+        </ul>
+        <br>
+
+    </div>
+
+    <script src="app.js"></script>
+</div>
+
+</body>
+</html>
